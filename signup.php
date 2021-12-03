@@ -31,8 +31,8 @@
     <input type="password" class="form-control" name="password" >
   </div>
   <div class="form-group">
-    <label for="Confpassword">Password</label>
-    <input type="password" class="form-control" name="Confpassword" >
+    <label for="passwordconf">Password</label>
+    <input type="password" class="form-control" name="passwordconf" >
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   <p class="text-center"> Already a Member? <a href="login.php"> Sign In  </a> </p>
