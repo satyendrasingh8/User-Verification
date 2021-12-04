@@ -26,13 +26,13 @@ require_once 'controllers/authController.php';
    </div>-->
    <div class="form-group">
     <label for="username">Username</label>
-    <input type="text" class="form-control" name="username" aria-describedby="emailHelp" >
+    <input type="text" value="<?php echo $username ?>"  class="form-control" name="username" aria-describedby="emailHelp" >
   
   </div>
 
   <div class="form-group">
     <label for="email">Email address</label>
-    <input type="email"  class="form-control" name="email" aria-describedby="emailHelp" >
+    <input type="email" value="<?php echo $email ?>" class="form-control" name="email" aria-describedby="emailHelp" >
     
   </div>
   <div class="form-group">
@@ -43,7 +43,7 @@ require_once 'controllers/authController.php';
     <label for="passwordconf">Password</label>
     <input type="password" class="form-control" name="passwordconf" >
   </div>
-  <button type="submit" name="login-btn" class="btn btn-primary">Sign up</button>
+  <button type="submit" name="signup-btn" class="btn btn-primary">Sign up</button>
   <p class="text-center"> Already a Member? <a href="login.php"> Sign In  </a> </p>
 </form>
 </div></div></div>
