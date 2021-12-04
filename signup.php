@@ -20,10 +20,13 @@ require_once 'controllers/authController.php';
     <div class="col-md-4 offset-md-4 form-div">
    <form action="signup.php" method="post" >
    <h3 class="text-center"> Register  </h3>
-  <!-- <div class="alert alert-danger"> 
-     <li>username required </li>
-
-   </div>-->
+   <?php  if(count($errors)>0): ?>
+   <div class="alert alert-danger"> 
+     <?php foreach($errors as $error): ?>
+     <li> <?php echo $error; ?> </li>
+     <?php endforeach; ?>
+   </div>
+   <?php endif; ?>
    <div class="form-group">
     <label for="username">Username</label>
     <input type="text" value="<?php echo $username ?>"  class="form-control" name="username" aria-describedby="emailHelp" >
@@ -40,8 +43,8 @@ require_once 'controllers/authController.php';
     <input type="password" class="form-control" name="password" >
   </div>
   <div class="form-group">
-    <label for="passwordconf">Password</label>
-    <input type="password" class="form-control" name="passwordconf" >
+    <label for="passwordConf">Password</label>
+    <input type="password" class="form-control" name="passwordConf" >
   </div>
   <button type="submit" name="signup-btn" class="btn btn-primary">Sign up</button>
   <p class="text-center"> Already a Member? <a href="login.php"> Sign In  </a> </p>
